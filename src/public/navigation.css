@@ -1,0 +1,12 @@
+/* Estilo personalizado para el navbar */
+.custom-navbar {
+  background-color: #eb7900; /* Color de fondo del navbar */
+}
+
+/* Estilo personalizado para el logo */
+.custom-logo {
+  height: 60px; /* Altura específica del logo */
+}
+nav ul li {
+  margin: 0 15px;
+}

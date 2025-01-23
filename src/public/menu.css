@@ -33,22 +33,24 @@
 .custom-row {
     background-color: #ffdd7e;
     border-radius: 15px;
-    padding: 15px;
+    padding: 5px;
+    padding-left: 20px;
     margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: start;
 }
 .custom-row img {
-    max-width: 50px;
-    margin-right: 10px;
+    max-width: 85px;
+    margin-right: 0px;
+    margin-bottom: -10px;
 }
 .custom-row h2 {
     margin-right: 1000px;
 }
 
 .custom-promociones {
-    background-color: #EB8B2B;
+    background-color: #eb7900;
     border-radius: 15px;
     padding: 15px;
     margin-top: 0px;
@@ -56,7 +58,7 @@
 }
 
 .custom-card {
-    background-color: #EB8B2B;
+    background-color: #eb7900;
     border-radius: 15px;
     padding: 15px;
     margin-top: 10px;

@@ -10,16 +10,6 @@ body {
   line-height: 1.6;
 }
 
-header {
-  background: url("https://via.placeholder.com/1920x600") no-repeat center
-    center/cover;
-  height: 100vh;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
 header h1 {
   font-size: 3rem;
@@ -30,43 +20,14 @@ header p {
   margin-top: 10px;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-}
 
-nav .logo {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
 
-nav ul {
-  list-style: none;
-  display: flex;
-}
 
-nav ul li {
-  margin: 0 15px;
-}
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
 
-nav ul li a:hover {
-  color: #f4a261;
-}
+
+
+
 
 section {
   padding: 40px 20px;
