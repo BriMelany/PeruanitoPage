@@ -4,44 +4,175 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%- include('partials/head') %>
+
    <link rel="stylesheet" href="/index.css">
    <title><%= title %></title>
   </head>
   <body>
     <%- include('partials/navigation') %>
 
-    <section id="about" class="about">
-      <h2>Sobre Nosotros</h2>
-      <p>
-        En Restaurante Delicioso, nos apasiona brindar experiencias culinarias
-        inolvidables. Utilizamos ingredientes frescos y recetas auténticas para
-        deleitar tu paladar.
-      </p>
-    </section>
-
-    <section id="menu" class="menu">
-      <h2>Menú</h2>
-      <div class="items">
-        <div class="item">
-          <h3>Pasta Italiana</h3>
-          <p>Deliciosa pasta con salsa casera.</p>
-          <span>$12.99</span>
+    <section id="home carousel">
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide custom-carousel-bg"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
         </div>
-        <div class="item">
-          <h3>Ensalada César</h3>
-          <p>Fresca y saludable con aderezo especial.</p>
-          <span>$8.99</span>
+        <div class="carousel-inner custom-carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="img/lomoPresentation.jpg"
+              class="d-block w-100 custom-carousel-img"
+              alt="Primera Imagen Platos"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="custom-carousel-caption">Platos Criollos Buenazos</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/causaPresentation.jpg"
+              class="d-block w-100 custom-carousel-img"
+              alt="Segunda Imagen"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="custom-carousel-caption">Entradas</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/PiscosourPresentation.jpg"
+              class="d-block w-100 custom-carousel-img"
+              alt="Tercera Imagen"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="custom-carousel-caption">Bebidas</h5>
+            </div>
+          </div>
         </div>
-        <div class="item">
-          <h3>Parrilla Mixta</h3>
-          <p>Carne jugosa a la parrilla con guarniciones.</p>
-          <span>$15.99</span>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon custom-carousel-control"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon custom-carousel-control"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="container my-5">
+        <div class="row g-3 d-flex align-items-stretch">
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="img/criollocard.jpg"
+                class="card-img-top custom-card-img"
+                alt="Imagen 1"
+              />
+              <div class="card-body d-flex flex-column justify-content-center">
+                <h5 class="card-title text-center">Platos Criollos</h5>
+                <p class="card-text text-justify">
+                  En El Peruanito, te invitamos a disfrutar de los auténticos
+                  sabores de la cocina criolla peruana. Platos tradicionales
+                  preparados con amor y los mejores ingredientes que te harán
+                  sentir como en casa.
+                </p>
+                <a href="/platos" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="img/entradacard.jpg"
+                class="card-img-top custom-card-img"
+                alt="Imagen 2"
+              />
+              <div class="card-body d-flex flex-column justify-content-center">
+                <h5 class="card-title text-center">Entradas</h5>
+                <p class="card-text text-justify">
+                  Descubre nuestras deliciosas entradas, perfectas para abrir el
+                  apetito. Desde causas limeñas hasta anticuchos llenos de sabor,
+                  cada bocado es un homenaje a la tradición peruana.
+                </p>
+                <a href="/entradas" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img
+                src="img/bebidascard.jpg"
+                class="card-img-top custom-card-img"
+                alt="Imagen 3"
+              />
+              <div class="card-body d-flex flex-column justify-content-center">
+                <h5 class="card-title text-center">Bebidas</h5>
+                <p class="card-text text-justify">
+                  Acompaña tu comida con nuestras bebidas únicas y refrescantes,
+                  como el clásico Pisco Sour o una chicha morada hecha al estilo
+                  tradicional. ¡Un verdadero placer para el paladar!
+                </p>
+                <a href="/bebidas" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    <div class="footer2">
 
-    <footer>
-      <p>&copy; 2025 Restaurante Delicioso. Todos los derechos reservados.</p>
-    </footer>
+      <a href="#" class="icono2">
+          <i class="fas fa-home"></i>
+      </a>
+      <a href="#" class="icono2">
+          <i class="fas fa-search"></i>
+      </a>
+      <a href="#" class="icono2">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="badge">3</span>
+      </a>
+      <a href="#" class="icono2">
+          <i class="fas fa-user"></i>
+      </a>
+
+  </div>
+
+    <%- include('partials/footer') %>
   </body>
 </html>

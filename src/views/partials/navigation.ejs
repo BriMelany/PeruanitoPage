@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="/navigation.css">
-<%- include('head') %>
 <header>
   <nav class="navbar navbar-expand-lg custom-navbar">
     <div class="container-fluid">
@@ -43,19 +42,32 @@
             <i class="bi bi-arrow-down-square-fill"></i> Carta
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Entradas</a></li>
-              <li><a class="dropdown-item" href="#">Platos Criollos</a></li>
-              <li><a class="dropdown-item" href="#">Bebidas</a></li>
+              <li><a class="dropdown-item" href="/entradas">Entradas</a></li>
+              <li><a class="dropdown-item" href="/platos">Platos Criollos</a></li>
+              <li><a class="dropdown-item" href="/bebidas">Bebidas</a></li>
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"> <i class="bi bi-bookmark-star-fill"></i> Promociones</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Cuenta</a>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+            <i class="bi bi-person-lines-fill"></i>Acceso
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/iniciosesion">Iniciar Sesion</a></li>
+              <li><a class="dropdown-item" href="#">Registrarse</a></li>
+            </ul>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  
 </header>

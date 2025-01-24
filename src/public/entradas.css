@@ -187,7 +187,7 @@ button:hover {
     margin-right: 20px;
 }
 
-.footer {
+.footer2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -199,14 +199,14 @@ button:hover {
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.icono{
+.icono2{
     color: black;
     font-size: 24px;
     text-decoration: none;
     position: relative;
 }
 
-.icono:hover {
+.icono2:hover {
     color: #ED9544;
 }
 
