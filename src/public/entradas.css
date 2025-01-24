@@ -23,7 +23,7 @@ body {
 }
 .header h1 {
     font-family: Poppins;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
     line-height: 28px;
     text-align: center;
@@ -225,6 +225,30 @@ button:hover {
     justify-content: center;
 }
 
+@media (max-width: 1300px) {
+
+    .dish {
+        width: 35%;
+        /* Aumenta el tamaño de los platos en pantallas pequeñas */
+        height: auto;
+    }
+
+    .buttons {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .dish img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .buttons button {
+        width: 170px;
+        font-size: 12px;
+    }
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .header {
@@ -272,6 +296,11 @@ button:hover {
         height: auto;
     }
 
+    .dish img {
+        width: 100%;
+        height: 250px;
+    }
+
     .description-dishes {
         width: 100%;
         /* Hace que la descripción ocupe el 100% del espacio */
@@ -302,12 +331,12 @@ button:hover {
     }
 
     .header h1 {
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .buttons {
         flex-direction: row;
-        gap: 10px;
+        gap: 15px;
     }
 
     .logo {
@@ -315,13 +344,13 @@ button:hover {
         height: auto;
     }
 
-    img {
+    .dish img {
         width: 100%;
-        height: 300px;
+        height: 200px;
     }
 
     .buttons button {
-        width: 100px;
+        width: 110px;
         font-size: 10px;
     }
 
@@ -351,11 +380,6 @@ button:hover {
     .line-dishes {
         flex-direction: row;
         gap: 10px;
-    }
-
-    img {
-        width: 100%;
-        height: 200px;
     }
 
     .footer {

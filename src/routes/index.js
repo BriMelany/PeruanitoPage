@@ -7,5 +7,6 @@ router.get('/entradas',(req,res) =>res.render('entradas',{title:'Entradas'}))
 router.get('/platos',(req,res) =>res.render('platos',{title:'Platos'}))
 router.get('/bebidas',(req,res) =>res.render('bebidas',{title:'Bebidas'}))
 router.get('/iniciosesion',(req,res) =>res.render('iniciosesion',{title:'Iniciar Sesión'}))
+router.get('/registro',(req,res) =>res.render('registro',{title:'Registro'}))
 
 export default router;

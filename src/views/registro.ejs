@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="/iniciosesion.css" rel="stylesheet">
+  <%- include('partials/head') %>  
+  
+</head>
+<body>
+
+    <%- include('partials/navigation') %>
+    <div class="login-container">
+        <img src="img/logopng copy.png" alt="Logo El Peruanito" class="logo" width="190">
+        <h1 class="welcome-text">Registrate y descubre</h1>
+        <h1 class="welcome-text">el sabor peruano</h1>
+        <p class="subtitle">Iniciar sesión o regístrate</p>
+        <h3 class="mb-4">Registro</h3>
+
+        <form action="/login" method="POST">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Nombres y Apellidos" required>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Correo" required>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Nombre de usuario" required>
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Registrate</button>
+        </form>
+    </div>
+
+    
+
+<div class="footer2">
+
+    <a href="#" class="icono2">
+        <i class="fas fa-home"></i>
+    </a>
+    <a href="#" class="icono2">
+        <i class="fas fa-search"></i>
+    </a>
+    <a href="#" class="icono2">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="badge">3</span>
+    </a>
+    <a href="#" class="icono2">
+        <i class="fas fa-user"></i>
+    </a>
+
+</div>
+<%- include('partials/footer') %>
+</body>
+
+</html>
