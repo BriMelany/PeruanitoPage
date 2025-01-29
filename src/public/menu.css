@@ -169,6 +169,7 @@
     width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
     height: 100%; /* Asegura que la imagen tenga la altura necesaria */
   }
+  
 
   .text-overlay .promo-title {
     font-size: 1.25rem; /* Hacer el título más pequeño en dispositivos móviles */
@@ -260,6 +261,9 @@
 @media (max-width: 767px) {
   .custom-card {
     padding: 10px; /* Reducir padding en pantallas pequeñas */
+  }
+  .logo-container {
+    margin-left: -750px;
   }
 
   .custom-card .card-img-top {
