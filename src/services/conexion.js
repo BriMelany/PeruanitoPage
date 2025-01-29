@@ -2,10 +2,10 @@ import pg from 'pg';
 const {Client}=pg;
 
 const config={
-    user:'db_lacasainformatica_user',
-    host: 'dpg-cu9bvv23esus73b2o410-a.oregon-postgres.render.com',
-    database: 'db_lacasainformatica',
-    password: 'Y6Wxkx2RNSh4DAGd5rGPgzxYIIR5d7tY',
+    user:'bd_peruanito_user',
+    host: 'dpg-cu179ld6l47c73a132b0-a.oregon-postgres.render.com',
+    database: 'bd_peruanito',
+    password: 'sE7u0jQ2EUvzdY0Y2elmVCpbpbgi3w4n',
     port: 5432,
     ssl: {
         rejectUnauthorized: false,
@@ -20,4 +20,15 @@ export async function Conectar(params){
     }catch(error){
         console.log('Error en la conexión');
     }
+}
+
+export async function ConsultarPlatos() {
+    const client = new Client(config);
+    try {
+        await client.connect();
+        const result = await client.query('SELECT * FROM platos');
+        return result.rows;
+    } catch (error) {
+        console.log('Error en la conexión');
+    }
 }

@@ -1,196 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%- include('partials/head') %>
-    <link rel="stylesheet" href="./entradas.css">
+    <link rel="stylesheet" href="./entradas.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <%- include('partials/navigation') %>
     <div class="header">
-        <div class="circle">
-            <img class="arrow" src="/img/arrow2.png" alt="Arrow">
-        </div>
+      <div class="circle">
+        <img class="arrow" src="/img/arrow2.png" alt="Arrow" />
+      </div>
 
-        <h1>Nuestras Bebidas</h1>
+      <h1>Nuestras Bebidas</h1>
 
-        <img class="logo" src="/img/logopng copy.png" alt="">
-
+      <img class="logo" src="/img/logopng copy.png" alt="" />
     </div>
 
     <section>
+      <div class="search-container">
+        <input type="text" id="search" name="search" placeholder="Buscar..." />
+      </div>
 
-        <div class="search-container">
-            <input type="text" id="search" name="search" placeholder="Buscar...">
-        </div>
+      <div class="buttons">
+        <button>Tradicionales</button>
 
-        <div class="buttons">
+        <button>Coctelería</button>
 
-            <button>Tradicionales</button>
-
-            <button>Coctelería</button>
-
-            <button>Refrescante</button>
-
-        </div>
-
+        <button>Refrescante</button>
+      </div>
     </section>
 
     <div class="dishes">
-
         <div class="line-dishes">
-
-            <div class="dish">
-
-                <div class="star">
-                    <div class="star-image"></div>
-                </div>
-
-                <img src="/img/chicha morada.jpg" alt="">
-
-                <div class="description-dishes">
-                    <p>S/15.00</p>
-
-                    <h2>Chicha Morada 1L</h2>
-
-                    <button> Pedir Ahora </button>
-                </div>
+          <div class="dish">
+            <div class="star">
+              <div class="star-image"></div>
             </div>
-
-            <div class="dish">
-
-                <div class="star">
-                    <div class="star-image"></div>
-                </div>
-
-                <img src="/img/limonada.png" alt="">
-
-
-                <div class="description-dishes">
-                    <p>S/18.00</p>
-
-                    <h2>Limonada Frozen</h2>
-
-                    <button> Pedir Ahora </button>
-                </div>
-
-
+      
+            <img src="/img/chicha morada.jpg" alt="Chicha Morada 1L" />
+      
+            <div class="description-dishes">
+              <p>S/15.00</p>
+              <h2>Chicha Morada 1L</h2>
+              <p class="short-description">Refresco tradicional peruano hecho a base de maíz morado, especias y frutas naturales.</p>
+              <button>Pedir Ahora</button>
             </div>
-
-
+          </div>
+      
+          <div class="dish">
+            <div class="star">
+              <div class="star-image"></div>
+            </div>
+      
+            <img src="/img/limonada.png" alt="Limonada Frozen" />
+      
+            <div class="description-dishes">
+              <p>S/18.00</p>
+              <h2>Limonada Frozen</h2>
+              <p class="short-description">Limonada fresca y fría, perfecta para refrescarte en cualquier momento del día.</p>
+              <button>Pedir Ahora</button>
+            </div>
+          </div>
         </div>
-
-
+      
         <div class="line-dishes">
-
-            <div class="dish">
-
-                <div class="star">
-                    <div class="star-image"></div>
-                </div>
-
-                <img src="/img/maracuya.png" alt="">
-
-                <div class="description-dishes">
-                    <p>S/18.00</p>
-
-                    <h2>Maracuya 1L</h2>
-
-                    <button> Pedir Ahora </button>
-                </div>
-
+          <div class="dish">
+            <div class="star">
+              <div class="star-image"></div>
             </div>
-
-            <div class="dish">
-
-                <div class="star">
-                    <div class="star-image"></div>
-                </div>
-
-                <img src="/img/emoliente.png" alt="">
-
-                <div class="description-dishes">
-                    <p>S/18.00</p>
-
-                    <h2>Emoliente</h2>
-
-                    <button> Pedir Ahora </button>
-                </div>
-
-
+      
+            <img src="/img/maracuya.png" alt="Maracuya 1L" />
+      
+            <div class="description-dishes">
+              <p>S/18.00</p>
+              <h2>Maracuya 1L</h2>
+              <p class="short-description">Refresco natural de maracuyá, con un toque exótico y refrescante.</p>
+              <button>Pedir Ahora</button>
             </div>
-
-
+          </div>
+      
+          <div class="dish">
+            <div class="star">
+              <div class="star-image"></div>
+            </div>
+      
+            <img src="/img/emoliente.png" alt="Emoliente" />
+      
+            <div class="description-dishes">
+              <p>S/18.00</p>
+              <h2>Emoliente</h2>
+              <p class="short-description">Bebida caliente de cebada, linaza y hierbas medicinales, para el invierno.</p>
+              <button>Pedir Ahora</button>
+            </div>
+          </div>
         </div>
-
-
+      
         <div class="line-dishes">
-
-            <div class="dish">
-
-                <div class="star">
-                    <div class="star-image"></div>
-                </div>
-
-                <img src="/img/chicha-jora.png" alt="">
-
-                <div class="description-dishes">
-                    <p>S/15.00</p>
-
-                    <h2>Chicha de Jora</h2>
-
-                    <button> Pedir Ahora </button>
-
-                </div>
-
+          <div class="dish">
+            <div class="star">
+              <div class="star-image"></div>
             </div>
-
-            <div class="dish">
-
-                <div class="star">
-                    <div class="star-image"></div>
-                </div>
-
-                <img src="/img/agua-membrillo.png" alt="">
-
-                <div class="description-dishes">
-                    <p>S/25.00</p>
-
-                    <h2>Agua de Membrillo</h2>
-
-                    <button> Pedir Ahora </button>
-                </div>
-
+      
+            <img src="/img/chicha-jora.png" alt="Chicha de Jora" />
+      
+            <div class="description-dishes">
+              <p>S/15.00</p>
+              <h2>Chicha de Jora</h2>
+              <p class="short-description">Bebida fermentada a base de maíz jora, tradicionalmente consumida en las fiestas peruanas.</p>
+              <button>Pedir Ahora</button>
             </div>
-
-
+          </div>
+      
+          <div class="dish">
+            <div class="star">
+              <div class="star-image"></div>
+            </div>
+      
+            <img src="/img/agua-membrillo.png" alt="Agua de Membrillo" />
+      
+            <div class="description-dishes">
+              <p>S/25.00</p>
+              <h2>Agua de Membrillo</h2>
+              <p class="short-description">Refresco natural de membrillo, ideal para acompañar tus platos más tradicionales.</p>
+              <button>Pedir Ahora</button>
+            </div>
+          </div>
         </div>
-
-
+      </div>
+    
+    <div class="footer2">
+      <a href="#" class="icono2">
+        <i class="fas fa-home"></i>
+      </a>
+      <a href="#" class="icono2">
+        <i class="fas fa-search"></i>
+      </a>
+      <a href="#" class="icono2">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="badge">3</span>
+      </a>
+      <a href="#" class="icono2">
+        <i class="fas fa-user"></i>
+      </a>
     </div>
-
-
-    < <div class="footer2">
-
-        <a href="#" class="icono2">
-            <i class="fas fa-home"></i>
-        </a>
-        <a href="#" class="icono2">
-            <i class="fas fa-search"></i>
-        </a>
-        <a href="#" class="icono2">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="badge">3</span>
-        </a>
-        <a href="#" class="icono2">
-            <i class="fas fa-user"></i>
-        </a>
-  
-    </div>
+    <%- include('partials/bot') %>
     <%- include('partials/footer') %>
-</body>
-
+  </body>
 </html>

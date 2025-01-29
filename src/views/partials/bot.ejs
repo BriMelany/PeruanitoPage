@@ -1,0 +1,66 @@
+<div id="chatbot-button" onclick="toggleChatbot()">
+    <img src="img/bot.png" alt="Chatbot" />
+</div>
+
+<!-- Contenedor para el iframe del chatbot, inicialmente oculto -->
+<div id="chatbot-container">
+    <iframe
+        allow="microphone;"
+        width="350"
+        height="430"
+        src="https://console.dialogflow.com/api-client/demo/embedded/415699e6-b56a-4fdf-b90c-6fac3a5a6d37">
+    </iframe>
+</div>
+
+
+<style>
+    /* Estilo para el botón flotante */
+    #chatbot-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 70px;
+        height: 70px;
+        background-color: #FF7F50;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    #chatbot-button img {
+        width: 70px;
+        height: 70px;
+    }
+
+    #chatbot-container {
+        display: none; /* Inicialmente oculto */
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        z-index: 999;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    iframe {
+        border: none;
+        border-radius: 8px;
+    }
+</style>
+
+<!-- JavaScript -->
+<script>
+    function toggleChatbot() {
+        const chatbotContainer = document.getElementById('chatbot-container');
+        // Cambia la visibilidad del iframe
+        if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+            chatbotContainer.style.display = 'block';
+        } else {
+            chatbotContainer.style.display = 'none';
+        }
+    }
+</script>

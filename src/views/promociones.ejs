@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include('partials/head') %>
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('partials/navigation') %>
+<h1>
+    Hola Mundo
+</h1>
+
+    <!--
+    <div id="mostrarPlatos" class="row">
+
+    </div>
+    <script>
+      async function getPlatos() {
+        try {
+          const response = await fetch("http://localhost:3000/api/get-platos", {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+          const platos=await response.json();
+          const mostrarPlatosDiv = document.getElementById("mostrarPlatos");
+          platos.forEach(plato => {
+            const platoDiv = document.createElement("div");
+            platoDiv.classList.add("col-md-4", "mb-4");
+            platoDiv.innerHTML = `
+             <div class="card" style="width: 18rem;">
+                                <img src="${plato.url}" class="card-img-top" alt="${plato.url}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${plato.nombre}</h5>
+                                    <p class="card-text">${plato.descripcion}</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+
+
+            `;
+
+            mostrarPlatosDiv.appendChild(platoDiv);
+          });
+            
+
+
+
+        } catch (error) {
+          console.error("Error al tener peliculas", error);
+        }
+      }
+
+      getPlatos();
+    </script>
+
+    -->
+
+<%- include('partials/bot') %>
+<%- include('partials/footer') %>
+  </body>
+</html>

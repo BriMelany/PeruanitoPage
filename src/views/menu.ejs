@@ -1,117 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%- include('partials/head') %>
-    <link rel="stylesheet" href="/menu.css">
+    <link rel="stylesheet" href="/menu.css" />
     <title>Menu Principal</title>
-</head>
-<body>
+  </head>
+  <body>
     <%- include('partials/navigation') %>
     <div class="container">
-        <div class="custom-row mb-2">
-            <h2 class="mb-0" > Menu</h2>
-            <img src="img/logopng.png" alt="Logo">
-           
-        </div>
-
-        <div class="container mt-4 ">
-            <form class="d-flex" action="resultados.html" method="GET">
-                <input class="form-control" type="search" placeholder="Buscar..." name="query" aria-label="Buscar">
-            </form>
-        </div>
-
-       <!-- Categorías -->
-<!-- Categorías -->
-<div class="row mt-4">
-    <div class="col-md-4 mb-4">
-        <a href="enlace1.html" class="text-decoration-none">
-            <div class="card">
-                <img src="img/entradasmenu.jpg" class=" custom-img-height" alt="Imagen 1">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Entradas</h5>
-                </div>
-            </div>
+      <div class="custom-row mb-2">
+        <a href="/">
+          <div class="circle">
+            <img class="arrow" src="/img/arrow2.png" alt="Arrow" />
+          </div>
         </a>
-    </div>
-    <div class="col-md-4 mb-4">
-        <a href="enlace2.html" class="text-decoration-none">
-            <div class="card">
-                <img src="img/platomenu.jpg" class="custom-img-height" alt="Imagen 2">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Platos Criollos</h5>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-md-4 mb-4">
-        <a href="enlace3.html" class="text-decoration-none">
-            <div class="card">
-                <img src="img/bebidasmenu.jpg" class=" custom-img-height" alt="Imagen 3">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Bebidas</h5>
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
+        <h2 class="mb-0">Menu</h2>
+        <img src="img/logopng.png" alt="Logo" />
+      </div>
 
-            <!-- Promociones -->
-            <div class="titulo-h3">
-                <h3>Promociones</h3>
-            </div>
-            <div class="custom-promociones mb-2 text-center">
-                <h4>Martes de Sabor</h4>
-                <p>2X1 en Entradas Criollas en todas las órdenes mayores a S/ 70.00</p>
-                <img src="img/promocionesmenu.jpg" alt="Promoción" class="img-fluid w-50   d-block mx-auto"> ">
-            </div>
+      <div class="container mt-4">
+        <form class="d-flex" action="resultados.html" method="GET">
+          <input
+            class="form-control"
+            type="search"
+            placeholder="Buscar..."
+            name="query"
+            aria-label="Buscar"
+          />
+        </form>
+      </div>
 
-         <!-- Populares -->
-         <div>
-            <h3>Populares</h3>
-            <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card custom-card">
-                        <img src="img/arrozConPollo.jpg" class="card-img-top" alt="Arroz con Pollo">
-                        <div class="card-body">
-                            <h5 class="card-title">Arroz con Pollo</h5>
-                            <p class="card-text">S/ 15.00</p>
-                            <a href="#" class="btn btn-primary">Pedir Ahora</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card custom-card">
-                        <img src="img/carapulcramenu.jpg" class="card-img-top" alt="Carapulcra">
-                        <div class="card-body">
-                            <h5 class="card-title">Carapulcra</h5>
-                            <p class="card-text">S/ 20.00</p>
-                            <a href="#" class="btn btn-primary">Pedir Ahora</a>
-                        </div>
-                    </div>
-                </div>
+      <!-- Categorías -->
+      <!-- Categorías -->
+      <div class="row mt-4">
+        <div class="col-md-4 mb-4">
+          <a href="enlace1.html" class="text-decoration-none">
+            <div class="card">
+              <img
+                src="img/entradasmenu.jpg"
+                class="custom-img-height"
+                alt="Imagen 1"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Entradas</h5>
+              </div>
             </div>
+          </a>
         </div>
+        <div class="col-md-4 mb-4">
+          <a href="enlace2.html" class="text-decoration-none">
+            <div class="card">
+              <img
+                src="img/platomenu.jpg"
+                class="custom-img-height"
+                alt="Imagen 2"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Platos Criollos</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 mb-4">
+          <a href="enlace3.html" class="text-decoration-none">
+            <div class="card">
+              <img
+                src="img/bebidasmenu.jpg"
+                class="custom-img-height"
+                alt="Imagen 3"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title">Bebidas</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Promociones -->
+      <div class="custom-row2 mb-2">
+        <h2>Promociones</h2>
+      </div>
+      <div class="custom-promociones mb-2 text-center">
+        <div class="promocion-img-container">
+          <img
+            src="img/promocionesmenu.jpg"
+            alt="Promoción"
+            class="img-fluid"
+          />
+          <div class="text-overlay">
+            <h5 class="promo-title">Martes de Sabor</h5>
+            <p class="promo-description">
+              2X1 en Entradas Criollas en todas las órdenes mayores a S/ 70.00
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Populares -->
+      <div>
+        <div class="custom-row2 mb-2">
+          <h2>Populares</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card custom-card">
+              <img
+                src="img/arrozConPollo.jpg"
+                class="card-img-top"
+                alt="Arroz con Pollo"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Arroz con Pollo</h5>
+                <p class="card-text">S/ 15.00</p>
+                <p class="card-description">
+                  Un delicioso plato tradicional peruano, acompañado de arroz
+                  perfectamente cocido y pollo jugoso.
+                </p>
+                <a href="#" class="btn btn-primary">Pedir Ahora</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card custom-card">
+              <img
+                src="img/carapulcramenu.jpg"
+                class="card-img-top"
+                alt="Carapulcra"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Carapulcra</h5>
+                <p class="card-text">S/ 20.00</p>
+                <p class="card-description">
+                  Una de las joyas de la cocina peruana, esta carapulcra combina
+                  papa seca con carne de cerdo o pollo en una salsa de ají.
+                </p>
+                <a href="#" class="btn btn-primary">Pedir Ahora</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="footer2">
-
-        <a href="#" class="icono2">
-            <i class="fas fa-home"></i>
-        </a>
-        <a href="#" class="icono2">
-            <i class="fas fa-search"></i>
-        </a>
-        <a href="#" class="icono2">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="badge">3</span>
-        </a>
-        <a href="#" class="icono2">
-            <i class="fas fa-user"></i>
-        </a>
-  
+      <a href="#" class="icono2">
+        <i class="fas fa-home"></i>
+      </a>
+      <a href="#" class="icono2">
+        <i class="fas fa-search"></i>
+      </a>
+      <a href="#" class="icono2">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="badge">3</span>
+      </a>
+      <a href="#" class="icono2">
+        <i class="fas fa-user"></i>
+      </a>
     </div>
+    <%- include('partials/bot') %>
     <%- include('partials/footer') %>
-</body>
+  </body>
 </html>

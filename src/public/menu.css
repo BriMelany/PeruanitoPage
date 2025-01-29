@@ -1,6 +1,24 @@
 .row {
   display: flex;
   justify-content: center;
+  margin-bottom: -20px;
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.arrow {
+  width: 60%;
+  height: auto;
 }
 .menu-header {
   background-color: #ffe5e5;
@@ -30,14 +48,31 @@
   object-fit: cover;
 }
 .custom-row {
-  background-color: #ffdd7e;
+  background-color: #ffd664;
   border-radius: 15px;
   padding: 5px;
-  padding-left: 20px;
+  padding-left: 10px;
+
   margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: start;
+}
+.custom-row2 {
+  background-color: #fdda78;
+  border-radius: 15px;
+  padding: 5px;
+  padding-left: 20px;
+  margin-top: 40px;
+  margin-left: -80px;
+  margin-right: -80px;
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  text-align: center; /* Asegura que el texto esté centrado horizontalmente */
+  height: 50px; /* Asegura que haya una altura suficiente para centrar el contenido */
+  font-weight: bold; /* Texto en negrita */
+  color: #551000;
 }
 .custom-row img {
   max-width: 85px;
@@ -48,22 +83,200 @@
   margin-right: 1000px;
 }
 
+.titulo-h3 h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Contenedor para la promoción */
 .custom-promociones {
-  background-color: #eb7900;
+  background-color: #ffbf59;
   border-radius: 15px;
   padding: 15px;
   margin-top: 0px;
-  color: #ffffff;
+  color: #240000;
+  font-weight: bold;
+  position: relative; /* Necesario para posicionar el texto sobre la imagen */
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
 }
 
+/* Contenedor de la imagen de la promoción */
+.promocion-img-container {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Altura fija para la imagen */
+  overflow: hidden; /* Para evitar que la imagen se desborde */
+}
+
+/* Asegura que la imagen ocupe toda la altura del contenedor */
+.promocion-img-container img {
+  width: 100%;
+  height: 100%;
+  height: 500px;
+  width: 900px;
+  object-fit: cover; /* Mantiene la imagen en proporción */
+  transition: transform 0.1s ease; /* Transición para el hover */
+}
+
+/* Estilo para la capa de texto que se coloca sobre la imagen */
+.text-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 99%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+/* Título dentro del overlay */
+.text-overlay .promo-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Descripción dentro del overlay */
+.text-overlay .promo-description {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Efecto de hover para la imagen */
+.promocion-img-container:hover img {
+  transform: scale(
+    1.02
+  ); /* Ligeramente aumenta el tamaño de la imagen al pasar el ratón */
+}
+
+/* Mejorar la responsividad */
+@media (max-width: 767px) {
+  /* Ajustar la altura de la imagen en pantallas pequeñas */
+  .promocion-img-container {
+    height: 200px; /* Menor altura en móviles */
+  }
+
+  /* Asegurarse de que la imagen se ajusta correctamente */
+  .promocion-img-container img {
+    object-fit: cover; /* Mantener la proporción de la imagen */
+    width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+    height: 100%; /* Asegura que la imagen tenga la altura necesaria */
+  }
+
+  .text-overlay .promo-title {
+    font-size: 1.25rem; /* Hacer el título más pequeño en dispositivos móviles */
+  }
+
+  .text-overlay .promo-description {
+    font-size: 0.9rem; /* Texto más pequeño en móviles */
+  }
+
+  /* Asegurarnos de que el contenedor no se desborde */
+  .custom-promociones {
+    padding: 0 15px; /* Espaciado interno en móviles */
+  }
+}
+
+/* Estilo personalizado para las cards */
 .custom-card {
-  background-color: #eb7900;
-  border-radius: 15px;
+  background-color: #ffbf59; /* Color de fondo */
+  border-radius: 15px; /* Bordes redondeados */
   padding: 15px;
   margin-top: 10px;
   display: flex;
-  align-items: center;
-  justify-content: start;
+  flex-direction: column; /* Asegura que los elementos dentro de la card se apilen verticalmente */
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para hover */
+}
+
+/* Efecto hover para las cards */
+.custom-card:hover {
+  transform: translateY(-5px); /* Levanta la card al pasar el ratón */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hacer hover */
+}
+
+/* Estilo de la imagen en las cards */
+.custom-card .card-img-top {
+  border-radius: 10px; /* Bordes redondeados en la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra bien el área de la card */
+  height: 200px; /* Altura de la imagen */
+  margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+/* Estilo para el título dentro de las cards */
+.custom-card .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333; /* Color oscuro para el título */
+}
+
+/* Estilo para el precio dentro de las cards */
+.custom-card .card-text {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-bottom: 15px;
+  color: #555; /* Color ligeramente gris para el precio */
+}
+
+/* Centrar el botón dentro de la card */
+.custom-card .btn-primary {
+  background-color: #ff8401; /* Fondo del botón */
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: center; /* Centra el botón horizontalmente */
+  margin-top: auto; /* Asegura que el botón esté al final de la card */
+}
+
+/* Efecto hover para el botón */
+.custom-card .btn-primary:hover {
+  background-color: #e87e00; /* Color más oscuro al hacer hover */
+  transform: translateY(-2px); /* Levantar el botón al hacer hover */
+}
+
+/* Estilo para la descripción en las cards */
+.custom-card .card-description {
+    font-size: 0.95rem;
+    color: #2d2d2d; /* Color gris suave para la descripción */
+    margin-bottom: 10px; /* Espacio debajo de la descripción */
+    height: 70px; /* Limita la altura de la descripción a tres líneas */
+    overflow: hidden; /* Oculta cualquier texto que se desborde */
+    text-overflow: ellipsis; /* Añade puntos suspensivos (...) si la descripción es muy larga */
+}
+
+/* Mejorar la responsividad */
+@media (max-width: 767px) {
+  .custom-card {
+    padding: 10px; /* Reducir padding en pantallas pequeñas */
+  }
+
+  .custom-card .card-img-top {
+    height: 180px; /* Ajustar la altura de la imagen en móviles */
+  }
+
+  .custom-card .card-title {
+    font-size: 1.1rem; /* Reducir el tamaño del título en móviles */
+  }
+
+  .custom-card .card-text {
+    font-size: 1rem; /* Reducir el tamaño del precio en móviles */
+  }
+
+  .custom-card .btn-primary {
+    padding: 8px 15px; /* Reducir el tamaño del botón en móviles */
+  }
 }
 .footer2 {
   display: flex;

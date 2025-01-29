@@ -5,12 +5,73 @@
 
 /* Estilo personalizado para el logo */
 .custom-logo {
-  height: 60px; /* Altura específica del logo */
+  height: 90px; /* Altura específica del logo */
+  margin-top: -20px;
+  margin-bottom: -20px;
+  padding-right: 20px;
+  width: 110px;
+  margin-left: 220px;
 }
+
+/* Asegurar que el navbar se ajuste en pantallas pequeñas */
+.navbar-brand {
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 22px;
+}
+
+/* Asegurar que los elementos del navbar no se desborden */
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 nav ul li {
   margin: 0 15px;
 }
 
-.navbar-brand{
-   font-weight: bold; 
+nav a {
+  padding-left: 0; /* Elimina el padding en pantallas pequeñas */
+}
+
+/* Estilo del dropdown */
+.nav-item .dropdown-menu {
+  background-color: #ffa646;
+}
+
+.nav-item .dropdown-menu .dropdown-item:hover {
+  background-color: #eb7900;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+/* Estilo del hover en los enlaces */
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: #ff8401;
+  color: rgb(0, 0, 0);
+  border-radius: 9px;
+}
+
+nav {
+  padding-left: 30px;
+}
+
+/* Mejorar la responsividad para pantallas pequeñas */
+@media (max-width: 767px) {
+  /* Centrar el logo y ajustar tamaño */
+  .custom-logo {
+    height: 60px; /* Ajustar el tamaño del logo */
+    width: auto; /* Asegura que la relación de aspecto se mantenga */
+    margin-left: 0; /* Eliminar margen en pantallas pequeñas */
+  }
+
+  .navbar-brand {
+    font-size: 18px; /* Reducir el tamaño del texto en pantallas pequeñas */
+    text-align: center; /* Asegura que el texto se centre */
+    margin-left: 0; /* Eliminar margen en pantallas pequeñas */
+  }
 }
