@@ -12,7 +12,7 @@
     <%- include('partials/navigation') %>
     <div class="header">
         <div class="circle">
-            <img class="arrow" src="/img/arrow2.png" alt="Arrow">
+            <a href="/entradas"><span class="material-symbols-outlined">arrow_back_ios</span></a>
         </div>
 
         <h1>Nuestros Platos Criollos</h1>
@@ -46,13 +46,13 @@
                     <div class="star-image"></div>
                 </div>
     
-                <img src="/img/lomo-saltado.png" alt="Lomo Saltado" />
+                <img src="/img/lomo-saltado.jpg" alt="Lomo Saltado" />
     
                 <div class="description-dishes">
                     <p>S/20.00</p>
                     <h2>Lomo Saltado</h2>
-                    <p class="short-description">Delicioso plato con trozos de lomo de res, cebolla, tomate, papas fritas y arroz, todo salteado al wok.</p>
-                    <button>Pedir Ahora</button>
+                    <span class="short-description">Delicioso plato con trozos de lomo de res, cebolla, tomate, papas fritas y arroz, todo salteado al wok.</span>
+                    <button onclick="agregarcarrito('Lomo Saltado',20.00,'/img/lomo-saltado.jpg')">Pedir Ahora</button>
                 </div>
             </div>
     
@@ -66,8 +66,8 @@
                 <div class="description-dishes">
                     <p>S/15.00</p>
                     <h2>Aji de Gallina</h2>
-                    <p class="short-description">Pollo desmenuzado en una suave y cremosa salsa de ají amarillo, acompañado de arroz blanco.</p>
-                    <button>Pedir Ahora</button>
+                    <span class="short-description">Pollo desmenuzado en una suave y cremosa salsa de ají amarillo, acompañado de arroz blanco.</span>
+                    <button onclick="agregarcarrito('Aji de Gallina',15.00,'/img/aji-gallina.png')">Pedir Ahora</button>
                 </div>
             </div>
         </div>
@@ -83,8 +83,8 @@
                 <div class="description-dishes">
                     <p>S/15.00</p>
                     <h2>Arroz con Pollo</h2>
-                    <p class="short-description">Un clásico de la gastronomía peruana: arroz con pollo sazonado con cilantro.</p>
-                    <button>Pedir Ahora</button>
+                    <span class="short-description">Un clásico de la gastronomía peruana: arroz con pollo sazonado con cilantro.</span>
+                    <button onclick="agregarcarrito('Arroz con Pollo',15.00,'/img/arroz-pollo.png')">Pedir Ahora</button>
                 </div>
             </div>
     
@@ -98,8 +98,8 @@
                 <div class="description-dishes">
                     <p>S/20.00</p>
                     <h2>Carapulcra</h2>
-                    <p class="short-description">Guiso a base de papa seca, cerdo y especias, con un toque de ají panca. ¡Un sabor único!</p>
-                    <button>Pedir Ahora</button>
+                    <span class="short-description">Guiso a base de papa seca, cerdo y especias, con un toque de ají panca. ¡Un sabor único!</span>
+                    <button onclick="agregarcarrito('Carapulcra',20.00,'/img/carapulcra.png')">Pedir Ahora</button>
                 </div>
             </div>
         </div>
@@ -115,8 +115,8 @@
                 <div class="description-dishes">
                     <p>S/15.00</p>
                     <h2>Cau Cau</h2>
-                    <p class="short-description">Plato tradicional peruano con mondongo, papas y una salsa amarilla especiada con ají amarillo.</p>
-                    <button>Pedir Ahora</button>
+                    <span class="short-description">Plato tradicional peruano con mondongo, papas y una salsa amarilla especiada con ají amarillo.</span>
+                    <button onclick="agregarcarrito('Cau Cau',15.00,'/img/cau-cau.png')">Pedir Ahora</button>
                 </div>
             </div>
     
@@ -130,8 +130,8 @@
                 <div class="description-dishes">
                     <p>S/25.00</p>
                     <h2>Rocoto Relleno</h2>
-                    <p class="short-description">Rocoto picante relleno con carne molida, cebolla y queso, luego horneado hasta dorarse.</p>
-                    <button>Pedir Ahora</button>
+                    <span class="short-description">Rocoto picante relleno con carne molida, cebolla y queso, luego horneado hasta dorarse.</span>
+                    <button onclick="agregarcarrito('Rocoto Relleno',25.00,'/img/rocoto-relleno.png')">Pedir Ahora</button>
                 </div>
             </div>
         </div>
@@ -145,9 +145,9 @@
         <a href="#" class="icono2">
             <i class="fas fa-search"></i>
         </a>
-        <a href="#" class="icono2">
+        <a href="/carrito" class="icono2">
             <i class="fas fa-shopping-cart"></i>
-            <span class="badge">3</span>
+            <span id="contador-carrito" class="badge"></span>
         </a>
         <a href="#" class="icono2">
             <i class="fas fa-user"></i>
@@ -156,7 +156,8 @@
     </div>
     <%- include('partials/bot') %>
     <%- include('partials/footer') %>
-
+     
+    <script src="/js/carrito.js"></script>
 </body>
 
 </html>

@@ -5,130 +5,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%- include('partials/head') %>
-    <link rel="stylesheet" href="./entradas.css">
-    <title>Document</title>
+        <link rel="stylesheet" href="./entradas.css">
+        <title>Document</title>
 </head>
+
 <body>
     <%- include('partials/navigation') %>
-    <div class="header">
-        <div class="circle">
-            <img class="arrow" src="/img/arrow2.png" alt="Arrow">
-        </div>
+        <div class="header">
+            <div class="circle">
+                <a href="/menu"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+            </div>
 
-        <h1>Nuestras Entradas</h1>
+            <h1>Nuestras Entradas</h1>
 
-        <img class="logo" src="/img/logopng copy.png" alt="">
-
-    </div>
-
-    <section>
-
-        <div class="search-container">
-            <input type="text" id="search" name="search" placeholder="Buscar...">
-        </div>
-
-        <div class="buttons">
-
-            <button>Criollos</button>
-
-            <button>Favoritos</button>
-
-            <button>Fusión</button>
+            <img class="logo" src="/img/logopng copy.png" alt="">
 
         </div>
 
-    </section>
+        <section>
 
-    <div class="dishes">
-        <div class="line-dishes">
-            <div class="dish">
-                <div class="star"><div class="star-image"></div></div>
-                <img src="/img/Causa-Limeña.jpg" alt="">
-                <div class="description-dishes">
-                    <p>S/5.00</p>
-                    <h2>Causa Limeña</h2>
-                    <p class="short-description">Deliciosa causa rellena con pollo y mayonesa, acompañada de aguacate.</p>
-                    <button> Pedir Ahora </button>
+            <div class="search-container">
+                <input type="text" id="search" name="search" placeholder="Buscar...">
+            </div>
+
+            <div class="buttons">
+
+                <button>Criollos</button>
+
+                <button>Favoritos</button>
+
+                <button>Fusión</button>
+
+            </div>
+
+        </section>
+
+        <div class="dishes">
+            <div class="line-dishes">
+                <div class="dish">
+                    <div class="star">
+                        <div class="star-image"></div>
+                    </div>
+                    <img src="/img/Causa-Limeña.jpg" alt="">
+                    <div class="description-dishes">
+                        <p>S/5.00</p>
+                        <h2>Causa Limeña</h2>
+                        <span class="short-description">Deliciosa causa rellena con pollo y mayonesa, acompañada de
+                            aguacate.</span>
+                        <button onclick="agregarcarrito('Causa Limeña',5.00,'/img/Causa-Limeña.jpg')"> Pedir Ahora </button>
+                    </div>
+                </div>
+                <div class="dish">
+                    <div class="star">
+                        <div class="star-image"></div>
+                    </div>
+                    <img src="/img/ensalada-rusa.jpg" alt="">
+                    <div class="description-dishes">
+                        <p>S/3.00</p>
+                        <h2>Ensalada Rusa</h2>
+                        <span class="short-description">Ensalada fresca con papas, zanahorias, guisantes y
+                            mayonesa.</span>
+                        <button onclick="agregarcarrito('Ensalada Rusa',3.00,'/img/ensalada-rusa.jpg')"> Pedir Ahora </button>
+                    </div>
                 </div>
             </div>
-            <div class="dish">
-                <div class="star"><div class="star-image"></div></div>
-                <img src="/img/ensalada-rusa.jpg" alt="">
-                <div class="description-dishes">
-                    <p>S/3.00</p>
-                    <h2>Ensalada Rusa</h2>
-                    <p class="short-description">Ensalada fresca con papas, zanahorias, guisantes y mayonesa.</p>
-                    <button> Pedir Ahora </button>
+            <div class="line-dishes">
+                <div class="dish">
+                    <div class="star">
+                        <div class="star-image"></div>
+                    </div>
+                    <img src="/img/humitas.jpg" alt="">
+                    <div class="description-dishes">
+                        <p>S/4.00</p>
+                        <h2>Humitas</h2>
+                        <span class="short-description">Masa de maíz rellena con queso y envuelta en hojas de
+                            choclo.</span>
+                        <button onclick="agregarcarrito('Humitas',4.00,'/img/humitas.jpg')"> Pedir Ahora </button>
+                    </div>
+                </div>
+                <div class="dish">
+                    <div class="star">
+                        <div class="star-image"></div>
+                    </div>
+                    <img src="/img/papa_huancaina.jpg" alt="">
+                    <div class="description-dishes">
+                        <p>S/6.00</p>
+                        <h2>Papa a la Huancaína</h2>
+                        <span class="short-description">Papas bañadas en una deliciosa salsa de ají amarillo y
+                            queso.</span>
+                        <button onclick="agregarcarrito('Papa a la Huancaina',6.00,'/img/papa_huancaina.jpg')"> Pedir Ahora </button>
+                    </div>
+                </div>
+            </div>
+            <div class="line-dishes">
+                <div class="dish">
+                    <div class="star">
+                        <div class="star-image"></div>
+                    </div>
+                    <img src="/img/tamales.jpg" alt="">
+                    <div class="description-dishes">
+                        <p>S/5.00</p>
+                        <h2>Tamales</h2>
+                        <span class="short-description">Masa de maíz rellena con carne y envuelta en hojas de
+                            plátano.</span>
+                        <button onclick="agregarcarrito('Tamales',5.00,'/img/tamales.jpg')"> Pedir Ahora </button>
+                    </div>
+                </div>
+                <div class="dish">
+                    <div class="star">
+                        <div class="star-image"></div>
+                    </div>
+                    <img src="/img/papa_ocopa.jpg" alt="">
+                    <div class="description-dishes">
+                        <p>S/6.00</p>
+                        <h2>Papa a la Ocopa</h2>
+                        <span class="short-description">Papas cubiertas con una cremosa salsa de huacatay y maní.</span>
+                        <button onclick="agregarcarrito('Papa a la Ocopa',6.00,'/img/papa_ocopa.jpg')"> Pedir Ahora </button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="line-dishes">
-            <div class="dish">
-                <div class="star"><div class="star-image"></div></div>
-                <img src="/img/humitas.jpg" alt="">
-                <div class="description-dishes">
-                    <p>S/4.00</p>
-                    <h2>Humitas</h2>
-                    <p class="short-description">Masa de maíz rellena con queso y envuelta en hojas de choclo.</p>
-                    <button> Pedir Ahora </button>
-                </div>
-            </div>
-            <div class="dish">
-                <div class="star"><div class="star-image"></div></div>
-                <img src="/img/papa_huancaina.jpg" alt="">
-                <div class="description-dishes">
-                    <p>S/6.00</p>
-                    <h2>Papa a la Huancaína</h2>
-                    <p class="short-description">Papas bañadas en una deliciosa salsa de ají amarillo y queso.</p>
-                    <button> Pedir Ahora </button>
-                </div>
-            </div>
-        </div>
-        <div class="line-dishes">
-            <div class="dish">
-                <div class="star"><div class="star-image"></div></div>
-                <img src="/img/tamales.jpg" alt="">
-                <div class="description-dishes">
-                    <p>S/5.00</p>
-                    <h2>Tamales</h2>
-                    <p class="short-description">Masa de maíz rellena con carne y envuelta en hojas de plátano.</p>
-                    <button> Pedir Ahora </button>
-                </div>
-            </div>
-            <div class="dish">
-                <div class="star"><div class="star-image"></div></div>
-                <img src="/img/papa_ocopa.jpg" alt="">
-                <div class="description-dishes">
-                    <p>S/6.00</p>
-                    <h2>Papa a la Ocopa</h2>
-                    <p class="short-description">Papas cubiertas con una cremosa salsa de huacatay y maní.</p>
-                    <button> Pedir Ahora </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
 
-    <div class="footer2">
 
-        <a href="#" class="icono2">
-            <i class="fas fa-home"></i>
-        </a>
-        <a href="#" class="icono2">
-            <i class="fas fa-search"></i>
-        </a>
-        <a href="#" class="icono2">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="badge">3</span>
-        </a>
-        <a href="#" class="icono2">
-            <i class="fas fa-user"></i>
-        </a>
-  
-    </div>
-    <%- include('partials/bot') %>
-    <%- include('partials/footer') %>
-  
+        <div class="footer2">
+
+            <a href="#" class="icono2">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="#" class="icono2">
+                <i class="fas fa-search"></i>
+            </a>
+            <a href="/carrito" class="icono2">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="contador-carrito" class="badge"></span>
+            </a>
+            <a href="#" class="icono2">
+                <i class="fas fa-user"></i>
+            </a>
+
+        </div>
+        <%- include('partials/bot') %>
+        <%- include('partials/footer') %>
+
+        <script src="/js/carrito.js"></script>
+
 </body>
 
 </html>

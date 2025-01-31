@@ -41,7 +41,7 @@
       <!-- Categorías -->
       <div class="row mt-4">
         <div class="col-md-4 mb-4">
-          <a href="enlace1.html" class="text-decoration-none">
+          <a href="/entradas" class="text-decoration-none">
             <div class="card">
               <img
                 src="img/entradasmenu.jpg"
@@ -55,7 +55,7 @@
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="enlace2.html" class="text-decoration-none">
+          <a href="/platos" class="text-decoration-none">
             <div class="card">
               <img
                 src="img/platomenu.jpg"
@@ -69,7 +69,7 @@
           </a>
         </div>
         <div class="col-md-4 mb-4">
-          <a href="enlace3.html" class="text-decoration-none">
+          <a href="/bebidas" class="text-decoration-none">
             <div class="card">
               <img
                 src="img/bebidasmenu.jpg"
@@ -124,7 +124,7 @@
                   Un delicioso plato tradicional peruano, acompañado de arroz
                   perfectamente cocido y pollo jugoso.
                 </p>
-                <a href="#" class="btn btn-primary">Pedir Ahora</a>
+                <a onclick="agregarcarrito('Arroz con Pollo',15.00,'img/arrozConPollo.jpg')" class="btn btn-primary">Pedir Ahora</a>
               </div>
             </div>
           </div>
@@ -142,7 +142,7 @@
                   Una de las joyas de la cocina peruana, esta carapulcra combina
                   papa seca con carne de cerdo o pollo en una salsa de ají.
                 </p>
-                <a href="#" class="btn btn-primary">Pedir Ahora</a>
+                <a  onclick="agregarcarrito('Carapulcra',20.00,'img/carapulcramenu.jpg')" class="btn btn-primary">Pedir Ahora</a>
               </div>
             </div>
           </div>
@@ -157,9 +157,9 @@
       <a href="#" class="icono2">
         <i class="fas fa-search"></i>
       </a>
-      <a href="#" class="icono2">
+      <a href="/carrito" class="icono2">
         <i class="fas fa-shopping-cart"></i>
-        <span class="badge">3</span>
+        <span id="contador-carrito" class="badge"></span>
       </a>
       <a href="#" class="icono2">
         <i class="fas fa-user"></i>
@@ -167,5 +167,7 @@
     </div>
     <%- include('partials/bot') %>
     <%- include('partials/footer') %>
+
+    <script src="/js/carrito.js"></script>
   </body>
 </html>

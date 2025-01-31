@@ -11,7 +11,7 @@
     <%- include('partials/navigation') %>
     <div class="header">
       <div class="circle">
-        <img class="arrow" src="/img/arrow2.png" alt="Arrow" />
+        <a href="/platos"><span class="material-symbols-outlined">arrow_back_ios</span></a>
       </div>
 
       <h1>Nuestras Bebidas</h1>
@@ -45,8 +45,8 @@
             <div class="description-dishes">
               <p>S/15.00</p>
               <h2>Chicha Morada 1L</h2>
-              <p class="short-description">Refresco tradicional peruano hecho a base de maíz morado, especias y frutas naturales.</p>
-              <button>Pedir Ahora</button>
+              <span class="short-description">Refresco tradicional peruano hecho a base de maíz morado, especias y frutas naturales.</span>
+              <button onclick="agregarcarrito('Chicha Morada 1L',15.00,'/img/chicha morada.jpg')">Pedir Ahora</button>
             </div>
           </div>
       
@@ -60,8 +60,8 @@
             <div class="description-dishes">
               <p>S/18.00</p>
               <h2>Limonada Frozen</h2>
-              <p class="short-description">Limonada fresca y fría, perfecta para refrescarte en cualquier momento del día.</p>
-              <button>Pedir Ahora</button>
+              <span class="short-description">Limonada fresca y fría, perfecta para refrescarte en cualquier momento del día.</span>
+              <button onclick="agregarcarrito('Limonada Frozen',18.00,'/img/limonada.png')">Pedir Ahora</button>
             </div>
           </div>
         </div>
@@ -77,8 +77,8 @@
             <div class="description-dishes">
               <p>S/18.00</p>
               <h2>Maracuya 1L</h2>
-              <p class="short-description">Refresco natural de maracuyá, con un toque exótico y refrescante.</p>
-              <button>Pedir Ahora</button>
+              <span class="short-description">Refresco natural de maracuyá, con un toque exótico y refrescante.</span>
+              <button onclick="agregarcarrito('Maracuya 1L',18.00,'/img/maracuya.png')">Pedir Ahora</button>
             </div>
           </div>
       
@@ -92,8 +92,8 @@
             <div class="description-dishes">
               <p>S/18.00</p>
               <h2>Emoliente</h2>
-              <p class="short-description">Bebida caliente de cebada, linaza y hierbas medicinales, para el invierno.</p>
-              <button>Pedir Ahora</button>
+              <span class="short-description">Bebida caliente de cebada, linaza y hierbas medicinales, para el invierno.</span>
+              <button onclick="agregarcarrito('Emoliente',18.00,'/img/emoliente.png')">Pedir Ahora</button>
             </div>
           </div>
         </div>
@@ -109,8 +109,8 @@
             <div class="description-dishes">
               <p>S/15.00</p>
               <h2>Chicha de Jora</h2>
-              <p class="short-description">Bebida fermentada a base de maíz jora, tradicionalmente consumida en las fiestas peruanas.</p>
-              <button>Pedir Ahora</button>
+              <span class="short-description">Bebida fermentada a base de maíz jora, tradicionalmente consumida en las fiestas peruanas.</span>
+              <button onclick="agregarcarrito('Chicha de Jora',15.00,'/img/chicha-jora.png')">Pedir Ahora</button>
             </div>
           </div>
       
@@ -124,8 +124,8 @@
             <div class="description-dishes">
               <p>S/25.00</p>
               <h2>Agua de Membrillo</h2>
-              <p class="short-description">Refresco natural de membrillo, ideal para acompañar tus platos más tradicionales.</p>
-              <button>Pedir Ahora</button>
+              <span class="short-description">Refresco natural de membrillo, ideal para acompañar tus platos más tradicionales.</span>
+              <button onclick="agregarcarrito('Agua de Membrillo',25.00,'/img/agua-membrillo.png')">Pedir Ahora</button>
             </div>
           </div>
         </div>
@@ -138,9 +138,9 @@
       <a href="#" class="icono2">
         <i class="fas fa-search"></i>
       </a>
-      <a href="#" class="icono2">
+      <a href="/carrito" class="icono2">
         <i class="fas fa-shopping-cart"></i>
-        <span class="badge">3</span>
+        <span id="contador-carrito" class="badge"></span>
       </a>
       <a href="#" class="icono2">
         <i class="fas fa-user"></i>
@@ -148,5 +148,6 @@
     </div>
     <%- include('partials/bot') %>
     <%- include('partials/footer') %>
+    <script src="/js/carrito.js"></script>
   </body>
 </html>

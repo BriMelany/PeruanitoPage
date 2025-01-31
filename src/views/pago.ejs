@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include('partials/head') %>
+    <link rel="stylesheet" href="./pago.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('partials/navigation') %>
+    <div class="header">
+      <div class="circle">
+        <a href="/carrito"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+      </div>
+
+      <h1>Pago</h1>
+
+      <img class="logo" src="/img/logopng copy.png" alt="" />
+    </div>
+
+    <section class="metodo">
+        <button class="back-button">⬅</button>
+        <h1>Método de Pago</h1>
+    </section>
+
+    <main class="payment-options">
+        <div class="option">
+            <img src="/img/VISA-emblema-1.jpg" alt="Visa" class="icon">
+            <p>Nueva tarjeta de crédito / débito</p>
+        </div>
+        <div class="option">
+            <img src="/img/VISA-emblema-1.jpg" alt="Visa" class="icon">
+            <p>Tarjeta de crédito guardada <br> **** **** **** 032</p>
+        </div>
+        <div class="option">
+            <img src="/img/yape-logo-3E473EE7E5-seeklogo.com_.png" alt="Yape" class="icon">
+            <p>Yape / Pago Efectivo</p>
+        </div>
+        <div class="option">
+            <p>Pagar cuando recibo el pedido (En Efectivo)</p>
+        </div>
+    </main>
+
+    <section class="footer-imagen">
+        <img src="/img/logo.png" alt="Peruanito Restaurant" class="logo">
+    </section>
+
+    <%- include('partials/bot') %>
+    <%- include('partials/footer') %>
+    <script src="/js/carrito.js"></script>
+  </body>
+</html>

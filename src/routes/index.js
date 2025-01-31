@@ -14,6 +14,9 @@ router.get('/api/get-platos',async(req,res)=>{
     const platos=await ConsultarPlatos();
     res.status(200).json(platos);
 });
+router.get('/carrito',(req,res) =>res.render('carrito',{title:'Carrito'}))
+router.get('/pago',(req,res) =>res.render('pago',{title:'Pago'}))
+
 
 
 export default router;
