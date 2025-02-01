@@ -179,6 +179,7 @@ button:hover {
 .description-dishes button {
     width: 150px;
     height: 40px;
+    padding: 10px 15px;
     background-color: #180E04;
     color: #FFFFFF;
     border: none;

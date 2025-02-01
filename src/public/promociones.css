@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Añadido para evitar que los márgenes y rellenos afecten al tamaño total */
+}
+
+body {
+    background-color: #FFECEC;
+}
+
+.header {
+    background-image: url('/img/header-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px 40px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.header h1 {
+    font-family: Poppins;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.circle span {
+    width: 70%;
+    /* Ajusta según el tamaño de la flecha */
+    height: auto;
+    display: block;
+    /* Evita espacios adicionales */
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF
+}
+
+.circle a {
+    text-decoration: none;
+}
+
+.logo {
+    width: 8%;
+    height: auto;
+}
+
+/* GRID PARA PLATOS */
+.platos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    justify-content: center;
+    align-items: center; 
+    margin: 50px auto;
+    padding: 0 20px; 
+    max-width: 1200px; 
+}
+
+/* CARD */
+.card {
+    background-color: #ED9544;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #060505;
+    margin: 10px 0;
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-top: 5px;
+}
+
+/* BOTÓN */
+.boton {
+    width: 100%;
+    max-width: 150px;
+    height: 40px;
+    background-color: #180E04;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #3D2616;
+}
+
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        text-align: center;
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        width: 15%;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .platos {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+        padding: 0 10px;
+        justify-items: center;
+    }
+
+    .imagen {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+    .circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .platos {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 0 5px;
+    }
+
+
+    .imagen {
+        height: 120px;
+    }
+}

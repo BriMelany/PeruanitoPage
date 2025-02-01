@@ -4,18 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%- include('partials/head') %>
+    <link rel="stylesheet" href="./promociones.css">
     <title>Document</title>
   </head>
   <body>
     <%- include('partials/navigation') %>
-<h1>
-    Hola Mundo
-</h1>
+    <div class="header">
+      <div class="circle">
+        <a href="/platos"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+      </div>
 
-    <!--
-    <div id="mostrarPlatos" class="row">
+      <h1>Promociones</h1>
+
+      <img class="logo" src="/img/logopng copy.png" alt="" />
+    </div>
+
+    
+    <div id="mostrarPlatos" class="platos">
 
     </div>
+
+    <%- include('partials/bot') %>
+    <%- include('partials/footer') %>
     <script>
       async function getPlatos() {
         try {
@@ -32,11 +42,12 @@
             platoDiv.classList.add("col-md-4", "mb-4");
             platoDiv.innerHTML = `
              <div class="card" style="width: 18rem;">
-                                <img src="${plato.url}" class="card-img-top" alt="${plato.url}">
+                                <img src="${plato.url}" class="imagen" alt="${plato.url}">
                                 <div class="card-body">
+                                     <h1 class="precio">S/.${plato.precio}</h1>
                                     <h5 class="card-title">${plato.nombre}</h5>
                                     <p class="card-text">${plato.descripcion}</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <button class="boton ">Pedir ahora</button>
                                 </div>
                             </div>
 
@@ -50,16 +61,15 @@
 
 
         } catch (error) {
-          console.error("Error al tener peliculas", error);
+          console.error("Error al traer los platos", error);
         }
       }
 
       getPlatos();
     </script>
 
-    -->
+   
 
-<%- include('partials/bot') %>
-<%- include('partials/footer') %>
+
   </body>
 </html>
